@@ -1,8 +1,4 @@
-def get_book_text(path):
-
-    with open(path) as f:
-        file_contents = f.read()
-        return file_contents
+from stats import get_book_text
 
 def word_counter(file_contents):
 
