@@ -15,3 +15,21 @@ def get_letters_numbered(path):
         else:
             letters[lowered] = 1
     return letters
+
+#sorts dictionary
+def sort_on(items):
+    return items["num"]
+
+def sort_dictionary(path):
+
+    unsorted_dict = get_letters_numbered(path)
+    sorted_dict_keys = []
+
+    for key in unsorted_dict:
+        if key.isalpha() == True:
+            sorted_dict_keys.append({"char": key, "num": unsorted_dict[key]})
+    sorted_dict_keys.sort(reverse=True, key=sort_on)
+    return sorted_dict_keys
+    
+
+
